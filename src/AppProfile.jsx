@@ -8,7 +8,7 @@ function AppProfile() {
   };
   return (
     <>
-      <button onClick={handleClick}>Event Button</button> {/* 이벤트 처리 */}
+      <button onClick={handleClick}>Event Button</button>
       <Profile
         image='https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80'
         name='Sarah'
