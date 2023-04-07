@@ -2,7 +2,7 @@ import React from 'react';
 import Avater from './Avater';
 
 export default function Profile({ image, name, title, isNew }) {
-  // props 이용 conponet 재사용
+  // props 이용 conponent 재사용
   return (
     <div className='profile'>
       {isNew && <span className='tag'>New</span>}
