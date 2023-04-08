@@ -29,6 +29,7 @@ export default function Products() {
   */
 
   return (
+    // 리스트에 자식요소를 만드는 경우 고유한 key를 전달하지 않으면 Warning
     <>
       <input type='checkbox' value={checked} onChange={handleChange} />
       <label htmlFor='checkbox'>Show only 🔥Sale</label>
