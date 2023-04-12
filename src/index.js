@@ -2,13 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Appform from './Appform';
-// import AppXY from './AppXY';
+import AppCard from './AppCard';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Appform />
+    <AppCard />
   </React.StrictMode>
 );
 
