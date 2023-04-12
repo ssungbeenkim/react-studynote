@@ -3931,9 +3931,11 @@ __metadata:
     "@testing-library/react": ^13.0.0
     "@testing-library/user-event": ^13.2.1
     eslint-config-react-app: ^7.0.1
+    immer: ^9.0.21
     react: ^18.2.0
     react-dom: ^18.2.0
     react-scripts: 5.0.1
+    use-immer: ^0.9.0
     web-vitals: ^2.1.0
   languageName: unknown
   linkType: soft
@@ -6954,7 +6956,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"immer@npm:^9.0.7":
+"immer@npm:^9.0.21, immer@npm:^9.0.7":
   version: 9.0.21
   resolution: "immer@npm:9.0.21"
   checksum: 70e3c274165995352f6936695f0ef4723c52c92c92dd0e9afdfe008175af39fa28e76aafb3a2ca9d57d1fb8f796efc4dd1e1cc36f18d33fa5b74f3dfb0375432
@@ -12372,6 +12374,16 @@ __metadata:
     querystringify: ^2.1.1
     requires-port: ^1.0.0
   checksum: fbdba6b1d83336aca2216bbdc38ba658d9cfb8fc7f665eb8b17852de638ff7d1a162c198a8e4ed66001ddbf6c9888d41e4798912c62b4fd777a31657989f7bdf
+  languageName: node
+  linkType: hard
+
+"use-immer@npm:^0.9.0":
+  version: 0.9.0
+  resolution: "use-immer@npm:0.9.0"
+  peerDependencies:
+    immer: ">=2.0.0"
+    react: ^16.8.0 || ^17.0.1 || ^18.0.0
+  checksum: 3f02e31d38f354125e6cffaaed0a08d9bf122b9df261aa7b38a25246813b3bd8b22bf97b192099d4e84adcfbbb07e69e14ba29520e0ac8d93f3991ef3a3652b4
   languageName: node
   linkType: hard
 

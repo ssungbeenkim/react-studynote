@@ -1,29 +1,33 @@
-import React, { useReducer } from 'react';
-import personReducer from './reducer/person-reducer.js';
-
+import { useImmer } from 'use-immer';
+/* 
+중첩된 객체의 상태를 관리하는 것은 복잡하고, 이것을 더욱 직관적으로 만들어주는 immer 라이브러리가 있다. avatar
+불변성 상태를 손쉽게 변경할 수 있다. 
+immer 내부적으로 별도의 객체를 만들어서 리턴해주고, 내부적으로 상태를 업데이트 해준다. 
+react 최신 버전의 hook으로 사용하는 것처럼 사용하려면 use-immer를 추가로 설치해서 사용한다.  
+실제 객체를 직접 수정하는 것 처럼 사용할 수 있어서 편리하다. 중첩되고 복잡한 상태관리를 할 때에 유용하게 쓸 수 있다. 
+*/
 export default function AppMentor() {
-  // const [person, setPerson] = useState(initialPerson);
-  const [person, dispatch] = useReducer(personReducer, initialPerson);
-  // person객체를 업데이트 하는 로직을 다른 곳에 두고 재사용 할 수 있게 해보자.
-  // useReducer는 업데이트 하는 로직을 다른곳에 두고 재사용하고자 할 때 쓸 수 있다.
-  // 이렇게 컴포넌트에서 로직을 분리하므로써 재사용성, 테스트 편리성을 가질 수 있다.
-
+  const [person, updatePerson] = useImmer(initialPerson);
   const handleUpdate = () => {
     const prev = prompt(`누구의 이름을 바꾸고 싶은가요?`);
     const current = prompt(`이름을 무엇으로 바꾸고 싶은가요?`);
-    dispatch({ type: 'updated', prev, current });
-    /* dispatch를 호출하면 useReducer가 자동으로 콜백을 호출하며, 기존의 person객체와 함께 
-    dispatch에 전달한 action오브젝트를 두번째 인자로 전달해 준다. 
-    외부 로직에서 업데이트한 객체를 리턴하면 자동으로 state를 업데이트 해서 person에 반영하고 re-render한다.  */
+    updatePerson((person) => {
+      const mentor = person.mentors.find((m) => m.name === prev);
+      mentor.name = current;
+    });
   };
   const handleAdd = () => {
     const name = prompt(`누구추가?`);
     const title = prompt(`타이틀?`);
-    dispatch({ type: 'added', name, title });
+    updatePerson((person) => {
+      person.mentors.push({ name, title });
+    });
   };
   const handleDelete = () => {
     const name = prompt(`누구삭제?`);
-    dispatch({ type: 'deleted', name });
+    updatePerson((person) => {
+      person.mentors = person.mentors.filter((m) => m.name !== name);
+    });
   };
   return (
     <div>
