@@ -16,7 +16,7 @@ export default function AppCard() {
         <article></article>
       </Card>
     </>
-  ); // 컨테이너용 컴포넌트 안에 들어가는 내용들은 원하는 대로 할 수 있다.
+  ); // 컨테이너용 컴포넌트 안에 들어가는 컨텐츠는 원하는 대로 할 수 있다.
 }
 /* 자식 요소들을 감싸는 한단계 높은 컴포넌트를 만들면 컴포넌트를 조금 더 효율성 있게 재사용 할 수 있다.  */
 function Card({ children }) {
