@@ -52,7 +52,7 @@ export default function AppMentorsButton() {
  */
 
 const Button = memo(({ text, onClick }) => {
-  // *1 새로운 props 객체가 생성되더라도 props 내의 값이 같다면 리렌더링을 하지 않도록 한다.
+  // *1 상위 컴포넌트에서 전달되는 새로운 props 객체가 생성되더라도 props 내의 값이 같다면 리렌더링을 하지 않도록 한다.
   console.log('Button', text, 're-rendering 😜');
   // const result = calculateSomething(); // 헤비한 일을 하는 함수로 인해 렌더링이 오래 걸린다.
   const result = useMemo(() => calculateSomething(), []);
