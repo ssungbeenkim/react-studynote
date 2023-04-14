@@ -16,15 +16,18 @@ export default function AppMentor() {
     dispatch에 전달한 action오브젝트를 두번째 인자로 전달해 준다. 
     외부 로직에서 업데이트한 객체를 리턴하면 자동으로 state를 업데이트 해서 person에 반영하고 re-render한다.  */
   };
+
   const handleAdd = () => {
     const name = prompt(`누구추가?`);
     const title = prompt(`타이틀?`);
     dispatch({ type: 'added', name, title });
   };
+
   const handleDelete = () => {
     const name = prompt(`누구삭제?`);
     dispatch({ type: 'deleted', name });
   };
+
   return (
     <div>
       <h1>

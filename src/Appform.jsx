@@ -24,7 +24,7 @@ export default function Appform() {
         type='text'
         id='name'
         name='name'
-        value={form.name} //
+        value={form.name} // 초기값을 설정해준다.
         onChange={handleChange} //사용자가 텍스트를 입력하면 콜백을 호출하여 컴포넌트의 상태와 매칭한다.
       />
       <label htmlFor='email'>이메일:</label>

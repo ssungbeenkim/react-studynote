@@ -12,6 +12,7 @@ export default function AppMentor() {
     const prev = prompt(`누구의 이름을 바꾸고 싶은가요?`);
     const current = prompt(`이름을 무엇으로 바꾸고 싶은가요?`);
     updatePerson((person) => {
+      // update
       const mentor = person.mentors.find((m) => m.name === prev);
       mentor.name = current;
     });
