@@ -46,3 +46,5 @@ export default function Products() {
     </>
   );
 }
+
+// 매번 이렇게 해주어야 할까 ? -> costom hook으로 재사용 가능하게 만들 수 있다.
