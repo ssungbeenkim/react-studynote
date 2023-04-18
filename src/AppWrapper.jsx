@@ -13,7 +13,9 @@ export default function AppCard() {
       </Card>
 
       <Card>
-        <article></article>
+        <article>
+          자식요소들을 감싸는 컴포넌트를 만들면 효율적으로 사용이 가능하다.
+        </article>
       </Card>
     </>
   ); // 컨테이너용 컴포넌트 안에 들어가는 컨텐츠는 원하는 대로 할 수 있다.

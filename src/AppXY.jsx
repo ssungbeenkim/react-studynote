@@ -15,7 +15,7 @@ export default function AppXY() {
     /* set을 여러번 호출하더라도 리엑트가 알아서 묶어서 렌더하지만 비동기적으로 여러번 호출하는 경우에는 
     효율적으로 되지 않을 수 있다. */
     // setPosition((prev) => ({ x: e.clientX, y: prev.y })); // x만 움직이게 하려면
-    setPosition((prev) => ({ ...prev, x: e.clientX })); // 값이 여러개인 경우에 이렇게 할 수 있다.
+    setPosition((prev) => ({ y: e.clientY, x: e.clientX })); // 값이 여러개인 경우에 이렇게 할 수 있다.
   };
   return (
     <div className='container' onPointerMove={handleMove}>

@@ -8,7 +8,7 @@ import personReducer from './reducer/person-reducer';
 *콘솔 컴포넌트 세팅에서 하이라이트로 어디까지 리렌더링이 되는지 확인할 수 있다.
 */
 
-export default function AppMentorsButton() {
+export default function AppReducerButton() {
   const [person, dispatch] = useReducer(personReducer, initialPerson);
 
   const handleUpdate = () => {

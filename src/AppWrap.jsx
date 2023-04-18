@@ -1,6 +1,7 @@
 import React from 'react';
 /* 
-Wrap Component = high order component 
+Wrap Component = high order component  
+컴포넌트를 감싸는 컴포넌트 
 컴포넌트의 재사용 
 */
 export default function AppWrap() {

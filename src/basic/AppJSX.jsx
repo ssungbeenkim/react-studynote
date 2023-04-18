@@ -1,8 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
 
 function AppJSX() {
-  const name = 'Vincent';
+  // const name = 'Vincent';
   const list = ['mili', 'apple', 'water', 'strawberry'];
   return (
     <>

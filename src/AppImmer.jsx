@@ -14,8 +14,8 @@ export default function AppMentor() {
     updatePerson((person) => {
       // update
       const mentor = person.mentors.find((m) => m.name === prev);
-      mentor.name = current;
-    });
+      mentor.name = current; // immer가 알아서 새로운 객체를 만들어서 리턴해준다.
+    }); // 직접 person.mentors를 수정하는 것 처럼 사용할 수 있다.
   };
   const handleAdd = () => {
     const name = prompt(`누구추가?`);
