@@ -15,8 +15,9 @@ export default function Products() {
         console.log('🔥뜨끈한 데이터를 네트워크에서 받아옴');
         setProducts(data);
       });
+    // return에는 컴포넌트가 unmount 될 때 실행될 콜백함수를 전달해준다.
+    // 컴포넌트가 없어질 때 메모리 정리나 소켓을 닫거나 등의 해야 할 일을 return으로 전달하면 된다.
     return () => {
-      // return에는 컴포넌트가 unmount 될 때 실행될 콜백함수를 전달해준다.
       console.log('🧹 깨끗하게 청소하는 일들을 합니다.');
     };
   }, [checked]); // DependencyList에 텅빈 배열을 전달하면 컴포넌트가 보여질 때 콜백을 한번만 호출한다.
