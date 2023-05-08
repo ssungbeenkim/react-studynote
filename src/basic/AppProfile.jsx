@@ -3,7 +3,7 @@ import Profile from './components/Profile';
 
 function AppProfile() {
   const handleClick = (event) => {
-    console.log(event);
+    console.log(event); // javascript의 event 객체와 동일한 것들을 가지고 있는 이벤트 객체가 출력된다.
     alert('button clicked!');
   };
   return (

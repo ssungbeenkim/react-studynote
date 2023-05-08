@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import AppCustomHook from './AppCustomHook';
+import AppCounter from './basic/AppCounter';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <AppCustomHook />
+    <AppCounter />
   </React.StrictMode>
 );
 
