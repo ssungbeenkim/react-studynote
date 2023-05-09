@@ -6,7 +6,7 @@ export default function personReducer(person, action) {
         ...person,
         mentors: person.mentors.map((mentor) => {
           if (mentor.name === prev) {
-            return { ...mentor, name: current };
+            return { ...mentor, name: current }; //
           }
           return mentor;
         }),
@@ -26,5 +26,7 @@ export default function personReducer(person, action) {
         mentors: person.mentors.filter((m) => m.name !== name),
       };
     }
+    default:
+      throw new Error(`Unhandled action type: ${action.type}`);
   }
 }

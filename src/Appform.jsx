@@ -11,7 +11,6 @@ export default function Appform() {
   // 상태는 개별적으로 관리해도 되지만 연관된 데이터라면 객체로 묶어서 관리하면 좋다.
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(form);
   };
   const handleChange = (e) => {
     const { name, value } = e.target;

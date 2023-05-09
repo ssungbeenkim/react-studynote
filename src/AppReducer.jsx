@@ -1,6 +1,10 @@
 import React, { useReducer } from 'react';
 import personReducer from './reducer/person-reducer.js';
 
+/* 
+컴포넌트는 로직에만 집중할 수 있고, 외부에 둔 로직은 재사용이 가능하다. 
+*/
+
 export default function AppMentor() {
   // const [person, setPerson] = useState(initialPerson);
   const [person, dispatch] = useReducer(personReducer, initialPerson);

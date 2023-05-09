@@ -4,6 +4,15 @@ import personReducer from './reducer/person-reducer';
 // 헤비한 일을 하는 컴포넌트라면? -> 앞으로 배울 Memo, useMemo, useCallback을 사용해서
 // 매번 호출되지 않토록 할 수 있다. 즉, 필요한 곳에서 성능개선을 해 주면 된다.
 
+/* 
+useMemo: 특정 결과값을 재사용할 수 있도록 해준다.
+useCallback: 특정 함수를 캐싱한다.
+memo : 컴포넌트 자체를 캐싱한다. props가 새로 전달되더라도 값 자체가 같다면 리렌더링을 하지 않는다.
+세가지를 사용해서 리렌더링을 방지할 수 있다. 
+
+그러나 실제로 보통 만들 때는 그냥 만들고 나서 성능이 문제가 되는 경우 성능 측정을 해서 문제가 되는 곳에만 적용시켜도 된다. 
+*/
+
 export default function AppMentorsButton() {
   const [person, dispatch] = useReducer(personReducer, initialPerson);
 

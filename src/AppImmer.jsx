@@ -1,5 +1,11 @@
 import { useImmer } from 'use-immer';
 /* 
+리엑트의 state는 읽기 전용이다. 변경이 필요하다면 기존에 있던 것을 복사해서 변경할 부분만 변경해서 새로 만들어야 한다
+코드가 길어지기 때문에 redux나 mobx와 같은 상태관리 라이브러리를 사용했다. immer는 직관적인 상태관리 라이브러리이다. 
+요즘에는 굳이 상태관리 라이브러리를 사용하지 않아도 리엑트 최신 버전에서 제공하는 hook을 이용할 수 있다. 
+글로벌한 상태관리는 context를 사용할 수 있고, 로직을 재사용하고 다른 곳에 두고 싶다면 reduce를 쓸 수 있다. 
+요즘에는 이런 최신 api로 커버가 가능하다. 
+
 중첩된 객체의 상태를 관리하는 것은 복잡하고, 이것을 더욱 직관적으로 만들어주는 immer 라이브러리가 있다. avatar
 불변성 상태를 손쉽게 변경할 수 있다. 
 immer 내부적으로 별도의 객체를 만들어서 리턴해주고, 내부적으로 상태를 업데이트 해준다. 
@@ -15,7 +21,7 @@ export default function AppMentor() {
       // update
       const mentor = person.mentors.find((m) => m.name === prev);
       mentor.name = current; // immer가 알아서 새로운 객체를 만들어서 리턴해준다.
-    }); // 직접 person.mentors를 수정하는 것 처럼 사용할 수 있다.
+    }); // 직접 person.mentors를 수정하는 것 처럼 사용할 수 있다... 존나편한데?
   };
   const handleAdd = () => {
     const name = prompt(`누구추가?`);
@@ -50,15 +56,15 @@ export default function AppMentor() {
   );
 }
 const initialPerson = {
-  name: '엘리',
+  name: '성빈',
   title: '개발자',
   mentors: [
     {
-      name: '밥',
+      name: '엘리',
       title: '시니어개발자',
     },
     {
-      name: '제임스',
+      name: '스티브잡스',
       title: '시니어개발자',
     },
   ],
